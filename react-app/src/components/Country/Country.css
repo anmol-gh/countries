@@ -1,0 +1,37 @@
+.country-details-container {
+	height: 90vh;
+	background-color: hsl(207, 26%, 17%);
+	color: hsl(0, 0%, 100%);
+	font-family: Nunito Sans;
+
+}
+
+.country-top {
+	height: 15%;
+	display: flex;
+	align-items: center;
+	margin-left: 5vh;
+}
+
+.country-back {
+    padding: 10px 25px 10px 25px;
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+	font-weight: 400;
+	background-color: hsl(209, 23%, 22%);
+    border: none;
+}
+
+.country-back:hover{
+    cursor: pointer;
+    background-color: hsl(207, 22%, 16%) ;
+    transition: 0.2s;
+}
+
+.country-heading {
+	font-family: Nunito Sans;
+}
+
+.country-details-span {
+	font-weight: bold;
+}

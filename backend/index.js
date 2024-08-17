@@ -13,13 +13,13 @@ app.listen(port, () => {
 })
 
 app.get("/region", async (req, res) => {
-    var region = req.query.region;
+    var region = req.query.q;
     const results = await findByRegion(region);
     res.send(results);
 })
 
 app.get("/country", async (req, res) => {
-    var country = req.query.country;
+    var country = req.query.q;
     const result = await findByCountry(country);
     res.send(result);
 })
