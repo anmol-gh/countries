@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+.navbar-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 2vh 5vh 2vh 5vh;
+	background-color: hsl(209, 23%, 22%);
+	font-family: Nunito Sans;
+	color: hsl(0, 0%, 100%);
+}
+
+.navbar-anchor {
+	text-decoration: none;
+	color : hsl(0, 0%, 100%)
+}
+
+
+.navbar-toggle {
+	cursor: pointer;
+	padding: 1vh;
+	color: hsl(0, 0%, 100%);
+	background: none;
+	border: none;
+}
