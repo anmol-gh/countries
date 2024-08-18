@@ -1,9 +1,10 @@
 .country-details-container {
 	height: 90vh;
+	width: 100vw;
 	background-color: hsl(207, 26%, 17%);
 	color: hsl(0, 0%, 100%);
 	font-family: Nunito Sans;
-
+	font-size: 16px;
 }
 
 .country-top {
@@ -14,24 +15,144 @@
 }
 
 .country-back {
-    padding: 10px 25px 10px 25px;
+	padding: 10px 25px 10px 25px;
 	text-decoration: none;
 	color: hsl(0, 0%, 100%);
 	font-weight: 400;
 	background-color: hsl(209, 23%, 22%);
-    border: none;
+	border: none;
 }
 
-.country-back:hover{
-    cursor: pointer;
-    background-color: hsl(207, 22%, 16%) ;
-    transition: 0.2s;
+.country-back:hover {
+	cursor: pointer;
+	background-color: hsl(207, 22%, 16%);
+	transition: 0.2s;
+}
+
+.country-loading {
+	height: 90vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: hsl(207, 22%, 16%);
+	font-family: Nunito Sans;
+}
+
+.country-loading-heading {
+	color : hsl(0, 0%, 100%);
+}
+
+.country-container {
+	height: 85%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.country-container-one,
+.country-container-two {
+	display: flex;
+	height: 50%;
+	width: 35%;
+}
+
+.country-container-one {
+	align-items: center;
+	justify-content: center;
+}
+
+.country-container-two {
+	margin-left: 5rem;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .country-heading {
 	font-family: Nunito Sans;
+	margin-bottom: 1rem;
+}
+
+.country-column {
+	display: flex;
+	justify-content: space-between;
 }
 
 .country-details-span {
 	font-weight: bold;
 }
+
+.borders {
+	margin-top: 1rem;
+}
+
+.border-countries {
+	background-color: hsl(209, 23%, 22%);
+	padding: 5px 20px 5px 20px;
+	color: hsl(0, 0%, 100%);
+	font-size: 16px;
+	border: none;
+	margin: 0 5px 0 5px;
+}
+
+
+/* For tablets */
+@media only screen and (max-width: 768px) {
+	.country-container-one,
+	.country-container-two {
+		width: 48%;
+	}
+
+	.country-container-two{
+
+		margin-left : 2.5rem;
+		margin-right : 1rem;
+	}
+}
+
+/* For mobile screens  */
+
+@media only screen and (max-width : 426px) {
+	.country-top {
+		height : 10%;
+	}
+
+	.country-container {
+		height: 90%;
+		flex-direction: column;
+		font-size: 14px;
+	}
+
+	.country-container-one, .country-container-two {
+		width : 90%;
+	}
+
+	.country-container-one {
+		height: 40%;
+		overflow: hidden;
+
+	}
+	.country-container-two {
+		height: 60%;
+		margin: 0;
+	}
+
+	.country-column {
+		flex-direction: column;
+	}
+
+	.country-column-one {
+		margin-bottom: 0.5rem;
+	}
+
+	.country-details-para {
+		margin-bottom: 0.1rem;
+	}
+
+	.country-flg {
+		object-fit: contain;
+	}
+	.borders {
+		margin-top: 0.5rem;
+	}
+} 
