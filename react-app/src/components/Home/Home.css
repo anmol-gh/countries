@@ -2,7 +2,7 @@
 	display: grid;
 	/* grid-template-columns: repeat(4, 1fr); */
 	grid-template-columns: repeat(auto-fill, 350px);
-	background-color: hsl(207, 26%, 17%);
+	background-color: var(--background);
 	align-items: center;
 	justify-items: center;
 	justify-content: center;
@@ -16,8 +16,8 @@
 	justify-items: center;
 	align-items: center;
 	margin: 7vh;
-	background-color: hsl(209, 23%, 22%);
-	color: hsl(0, 0%, 100%);
+	background-color: var(--foreground);
+	color: var(--text);
 }
 
 a {
@@ -42,4 +42,12 @@ a {
 
 .country-details-span {
 	font-weight: bold;
+}
+
+/* CSS for mobile */
+
+@media only screen and (max-width: 426px) {
+	.countries {
+		margin: 5vh;
+	}
 }

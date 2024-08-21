@@ -1,20 +1,23 @@
 import React from "react";
 import "./Country.css";
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 const Country = () => {
 	const url = useLocation();
-	const [country, setCountry] = useState([]);
+	var [country, setCountry] = useState([]);
 
 	//UseState to check if value of country is loaded.
 	const [loading, setLoading] = useState(false);
 	useEffect(() => {
 		axios.get(`http://localhost:8000/country${url.search}`).then((res) => {
-			setCountry(res.data);
-			setLoading(true);
 			console.log(res.data);
+			setCountry(res.data);
+			if (res.data == "Country not found, please recheck details") {
+				country = "Country not found, please recheck details";
+			}
+			setLoading(true);
 		});
 	}, []);
 
@@ -29,6 +32,15 @@ const Country = () => {
 				<h1 className='country-loading-heading'>Loading...</h1>
 			</div>
 		);
+	} else if (
+		loading &&
+		country == "Country not found, please recheck details"
+	) {
+		return (
+			<h1 className='country-loading-heading'>
+				Invalid Country details entered
+			</h1>
+		);
 	}
 	// Loads the below code when the value of Country is fetched.
 	else {
@@ -41,14 +53,18 @@ const Country = () => {
 				</section>
 				<div className='country-container'>
 					<div className='country-container-one'>
-						<img src={country.flags.png} alt={country.name} className="country-flg"/>
+						<img
+							src={country.flags.png}
+							alt={country.name}
+							className='country-flg'
+						/>
 					</div>
 					<div className='country-container-two'>
 						<div>
 							<h1 className='country-heading'>{country.name}</h1>
 						</div>
 						<div className='country-column'>
-							<div className="country-column-one">
+							<div className='country-column-one'>
 								<p className='country-details-para'>
 									<span className='country-details-span'>Native Name: </span>
 									{country.nativeName}
@@ -70,7 +86,7 @@ const Country = () => {
 									{country.capital}
 								</p>
 							</div>
-							<div className="country-column-two">
+							<div className='country-column-two'>
 								<p className='country-details-para'>
 									<span className='country-details-span'>
 										Top Level Domain:{" "}
@@ -100,7 +116,10 @@ const Country = () => {
 							<span className='country-details-span'>Border Countries: </span>
 							{country.borders && country.borders.length > 0 ? (
 								country.borders.map((border) => (
-									<button className='border-countries' key = {border}> {border}</button>
+									<button className='border-countries' key={border}>
+										{" "}
+										{border}
+									</button>
 								))
 							) : (
 								<span>None</span>

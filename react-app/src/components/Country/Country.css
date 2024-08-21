@@ -1,8 +1,8 @@
 .country-details-container {
 	height: 90vh;
 	width: 100vw;
-	background-color: hsl(207, 26%, 17%);
-	color: hsl(0, 0%, 100%);
+	background-color: var(--background);
+	color: var(--text);
 	font-family: Nunito Sans;
 	font-size: 16px;
 }
@@ -17,9 +17,9 @@
 .country-back {
 	padding: 10px 25px 10px 25px;
 	text-decoration: none;
-	color: hsl(0, 0%, 100%);
+	color: var(--text);
 	font-weight: 400;
-	background-color: hsl(209, 23%, 22%);
+	background-color: var(--foreground);
 	border: none;
 }
 
@@ -34,12 +34,12 @@
 	width: 100vw;
 	display: flex;
 	justify-content: center;
-	background-color: hsl(207, 22%, 16%);
+	background-color: var(--background);
 	font-family: Nunito Sans;
 }
 
 .country-loading-heading {
-	color : hsl(0, 0%, 100%);
+	color: var(--text);
 }
 
 .country-container {
@@ -87,14 +87,13 @@
 }
 
 .border-countries {
-	background-color: hsl(209, 23%, 22%);
+	background-color: var(--foreground);
 	padding: 5px 20px 5px 20px;
-	color: hsl(0, 0%, 100%);
+	color: var(--text);
 	font-size: 16px;
 	border: none;
 	margin: 0 5px 0 5px;
 }
-
 
 /* For tablets */
 @media only screen and (max-width: 768px) {
@@ -103,18 +102,17 @@
 		width: 48%;
 	}
 
-	.country-container-two{
-
-		margin-left : 2.5rem;
-		margin-right : 1rem;
+	.country-container-two {
+		margin-left: 2.5rem;
+		margin-right: 1rem;
 	}
 }
 
 /* For mobile screens  */
 
-@media only screen and (max-width : 426px) {
+@media only screen and (max-width: 426px) {
 	.country-top {
-		height : 10%;
+		height: 10%;
 	}
 
 	.country-container {
@@ -123,14 +121,14 @@
 		font-size: 14px;
 	}
 
-	.country-container-one, .country-container-two {
-		width : 90%;
+	.country-container-one,
+	.country-container-two {
+		width: 90%;
 	}
 
 	.country-container-one {
 		height: 40%;
 		overflow: hidden;
-
 	}
 	.country-container-two {
 		height: 60%;
@@ -155,4 +153,4 @@
 	.borders {
 		margin-top: 0.5rem;
 	}
-} 
+}

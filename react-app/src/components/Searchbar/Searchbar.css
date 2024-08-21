@@ -1,37 +1,51 @@
 .searchbar-container {
-	padding-top: 3vh;
 	display: flex;
 	justify-content: space-between;
 	padding: 2vh 5vh 2vh 5vh;
-	background-color: hsl(207, 26%, 17%);
+	background-color: var(--background);
 	font-family: Nunito Sans;
-	color: hsl(0, 0%, 100%);
+	color: var(--text);
 }
 
 .searchbar-input {
 	padding: 10px;
 	width: 20%;
-	background-color: hsl(209, 23%, 22%);
-	color: hsl(0, 0%, 100%);
+	background-color: var(--foreground);
+	color: var(--text);
 	border: none;
 }
 
-.searchbar-option {
-	padding : 2px;
+.searchbar-select {
+	cursor: pointer;
 }
 
+.searchbar-option {
+	padding: 2px;
+}
 
 ::placeholder {
-	color: hsl(0, 0%, 100%);
+	color: var(--text);
+
 	opacity: 1;
 }
 
 ::-ms-input-placeholder {
-	color: hsl(0, 0%, 100%);
+	color: var(--text);
 }
 
 .searchbar-select {
-	background-color: hsl(209, 23%, 22%);
-	color: hsl(0, 0%, 100%);
-    padding : 10px;
+	background-color: var(--background);
+	color: var(--text);
+	padding: 10px;
+}
+
+/* CSS for mobile */
+
+@media only screen and (max-width: 426px) {
+	.searchbar-container {
+		padding: 2vh 2vh 2vh 2vh;
+	}
+	.searchbar-input {
+		width: 50%;
+	}
 }

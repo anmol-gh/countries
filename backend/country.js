@@ -8,9 +8,10 @@ const findByCountry = (country) => {
                 return data[i]
             }
         }
+        return "Country not found, please recheck details"
     }
     catch {
-        return "Country not found, please recheck details"
+        return "Error occured, please try again later."
     }
 
 }
