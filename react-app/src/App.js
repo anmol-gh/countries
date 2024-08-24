@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <>
       <Navbar />
-      <Searchbar />
+      {/* <Searchbar /> */}
       <Home />
     </>
   },

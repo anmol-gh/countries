@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
-
+import moons from "../bulbs.png"
 const Navbar = () => {
 	const [mode, SetMode] = useState("dark");
 	const setDarkMode = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
 				<h3 className='navbar-heading'> Where in the world?</h3>
 			</a>
 			<button className='navbar-toggle' onClick={toggleTheme}>
-				{/* <img src='' alt='' /> */}
+				<img className= "theme-img"src={moons} alt='Theme image'  />
 				<p id='theme-toggle'> Dark Mode</p>
 			</button>
 		</div>

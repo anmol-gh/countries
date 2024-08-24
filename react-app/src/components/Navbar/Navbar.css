@@ -19,9 +19,17 @@
 }
 
 .navbar-toggle {
+	display : flex;
+	align-items: center;
 	cursor: pointer;
 	padding: 1vh;
 	color: var(--text);
-	background: none;
+	background: none;	
 	border: none;
+}
+
+.theme-img {
+	height : 25px;
+	width : 25px;
+	margin-right: 0.5rem;
 }
